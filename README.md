@@ -29,12 +29,12 @@ de cada letra de la url.
 
 El reto lo enfoco de una forma más general, más allá del mensaje y posiciones numéricas dadas.
 
-1- Creo una función anónima pasándole dos parámetros, el mensaje y las posiciones. Y formateo dicho mensaje, quitándo acentos, espacios y carácteres diacríticos (el enfoque 
+1- Creo una función anónima pasándole dos parámetros, el mensaje y las posiciones. Y formateo dicho mensaje, quitándo acentos, espacios y carácteres diacríticos (el enfoque
 general).
 
 2- Creo un array vacío para la url.
 
-3- Creo un bucle para iterar a través del array serieNums, utilizando los valores en serieNums como índices en cada iteración del bucle, y asignar los valores correspondientes 
+3- Creo un bucle para iterar a través del array serieNums, utilizando los valores en serieNums como índices en cada iteración del bucle, y asignar los valores correspondientes
 de formatMessage a las posiciones respectivas en urlArray.
 
 4- Creo un string, combinando los elementos de urlArray con el método .join(). Para acabar retornando el string.
@@ -117,9 +117,9 @@ Este reto también lo enfoco de manera general, decidiendo crear una clase.
 
 4- Establecido el tamaño de la cuadrícula, realizo un bucle asignando a cada posición de la cuádricula una coordenada, con valores de [1,1] a [6,6].
 
-5- Realizo un bucle 4 veces, para intentar desencriptar el mensaje en 4 orientaciones diferentes según las posiciones del parámetro gridPosBase. Dentro de este bucle, se itera 
+5- Realizo un bucle 4 veces, para intentar desencriptar el mensaje en 4 orientaciones diferentes según las posiciones del parámetro gridPosBase. Dentro de este bucle, se itera
 arrayMessage, y estos carácteres se agrupan en lineaGridMessage.
-Se recorre la cuadrícula y se verifica si las coordenadas coinciden con alguna de las posiciones de gridPosBase. Si hay coincidencias, el carácter de gridMessage se agrega a 
+Se recorre la cuadrícula y se verifica si las coordenadas coinciden con alguna de las posiciones de gridPosBase. Si hay coincidencias, el carácter de gridMessage se agrega a
 arrayDecrypted. Y si la longitud de arrayDecrypted no es = a la longitud de arrayMessage original, la cuadrícula rota.
 
 6- Una vez terminado el bucle, el método devuelve arrayDecrypted en una sola cadena
@@ -190,12 +190,28 @@ class Decrypt {
 }
 ```
 
+
 7- Una vez creada la clase con el constructor y el método con la lógica. Se establece las posiciones por coordenadas para desencriptar el mensaje del reto.
 
 8- Se crea la instancia a partir de la clase Decrypt, y se le pasa su método decrypt() para desencriptar el mensaje.
 
-9- Finalmente, se obtiene por consola el mensaje desencriptado, resultado:
+9- Finalmente, se obtiene por consola el mensaje desencriptado.
 
+```agsl
+const gridPosBase = [
+[1, 1],[4, 1],[2, 2],
+[6, 2],[5, 3],[1, 4],
+[4, 4],[3, 5],[6, 5]
+];
+const encriptedMessage = 'lróaon. sg sdersoildsu.:.cc kiomamii';
+
+const decryptInstance = new Decrypt(encriptedMessage, gridPosBase);
+const decryptedMessage = decryptInstance.decrypt();
+
+console.log(decryptedMessage)
+```
+
+Resultado:
 
 ![resultado.png](VI-Generacion/resultado.png)
 
