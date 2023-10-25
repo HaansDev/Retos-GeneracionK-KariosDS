@@ -86,9 +86,9 @@ Pistas para resolver el problema:
   grados)
 - El código JavaScript podría comenzar y terminar así:
 
-<div align="center">
+
     ![img.png](img.png)
-</div>
+
 
 - Podemos observar que cada vez que giramos la rejilla 90º en el sentido
   de las agujas del reloj la primera fila (eje x) pasa a ser la sexta columna
@@ -103,9 +103,9 @@ Pistas para resolver el problema:
   [2,2]...
 - El grid usado es este:
 
-<div align="center">
+
     ![img_1.png](img_1.png)
-</div>
+
 
 Este reto también lo enfoco de manera general, decidiendo crear una clase.
 
@@ -196,6 +196,6 @@ class Decrypt {
 
 9- Finalmente, se obtiene por consola el mensaje desencriptado, resultado:
 
-<div align="center">
-    ![resultado.png](VI-Generacion/resultado.png)
-</div>
+
+![resultado.png](VI-Generacion/resultado.png)
+
